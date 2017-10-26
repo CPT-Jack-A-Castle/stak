@@ -18,10 +18,7 @@ list(APPEND CMAKE_PREFIX_PATH "$ENV{CMAKE_PREFIX_PATH}")
 # CMake user options
 ################################################################################
 
-# gcc 5.1 is the first GNU version without CoW strings
-# https://github.com/fireice-uk/xmr-stak-nvidia/pull/10#issuecomment-290821792
-# If you remove this guard to compile with older gcc versions the miner will produce
-# a high rate of wrong shares.
+
 if(${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU")
     if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS 5.1)
         message(FATAL_ERROR "g++ version must be at least 5.1!")
@@ -163,19 +160,19 @@ endif()
 file(GLOB SRCFILES_CPP "*.cpp" "crypto/*.cpp")
 file(GLOB SRCFILES_C "crypto/*.c")
 
-add_library(xmr-stak-c
+add_library(stak-c
     STATIC
     ${SRCFILES_C}
 )
-set_property(TARGET xmr-stak-c PROPERTY C_STANDARD 99)
-target_link_libraries(xmr-stak-c ${LIBS})
+set_property(TARGET stak-c PROPERTY C_STANDARD 99)
+target_link_libraries(stak-c ${LIBS})
 
 add_executable(stak
     ${SRCFILES_CPP}
 )
 
 set(EXECUTABLE_OUTPUT_PATH "bin")
-target_link_libraries(xmr-stak-cpu ${LIBS} xmr-stak-c)
+target_link_libraries(stak-cpu ${LIBS} stak-c)
 
 ################################################################################
 # Install
