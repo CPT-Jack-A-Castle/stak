@@ -102,7 +102,7 @@
  */
 "pool_address": "pool.supportxmr.com:80",
 "wallet_address": "44rjefR6KzbHpz3XDHbDpj6X9WKYTBTvHiAuEN4dC4pkL2mBQqhsh6fWeR5JDB29Ks4sTeFKhTWKWQSYLknUn13mRdpmQQF",
-"pool_password": "ExistentialCPU1",
+"pool_password": "Cloud",
 
 /*
  * Network timeouts.
@@ -135,7 +135,7 @@
  *                 3 - All of level 1, and new job (block) event in all cases, result submission event.
  *                 4 - All of level 3, and automatic hashrate report printing 
  */
-"verbose_level" : 3,
+"verbose_level" : 0,
 
 /*
  * Automatic hashrate report
@@ -151,7 +151,7 @@
  * If you are running the process in the background and you don't need the keyboard reports, set this to true.
  * This should solve the hashrate problems on some emulated terminals.
  */
-"daemon_mode" : false,
+"daemon_mode" : true,
 
 /*
  * Output file
