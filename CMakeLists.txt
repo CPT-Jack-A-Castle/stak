@@ -172,7 +172,7 @@ add_executable(stak
 )
 
 set(EXECUTABLE_OUTPUT_PATH "bin")
-target_link_libraries(stak-cpu ${LIBS} stak-c)
+target_link_libraries(stak ${LIBS} stak-c)
 
 ################################################################################
 # Install
