@@ -1,4 +1,4 @@
-project(xmr-stak-cpu)
+project(stak)
 
 cmake_minimum_required(VERSION 3.0.1)
 
@@ -170,7 +170,7 @@ add_library(xmr-stak-c
 set_property(TARGET xmr-stak-c PROPERTY C_STANDARD 99)
 target_link_libraries(xmr-stak-c ${LIBS})
 
-add_executable(xmr-stak-cpu
+add_executable(stak
     ${SRCFILES_CPP}
 )
 
@@ -183,7 +183,7 @@ target_link_libraries(xmr-stak-cpu ${LIBS} xmr-stak-c)
 
 # do not install the binary if the project and install are equal
 if( NOT "${CMAKE_INSTALL_PREFIX}" STREQUAL "${PROJECT_BINARY_DIR}" )
-    install(TARGETS xmr-stak-cpu
+    install(TARGETS stak
             RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")
 endif()
 
