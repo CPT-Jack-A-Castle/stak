@@ -1,14 +1,30 @@
 
 "cpu_threads_conf" : 
  [ 
- { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
- { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
- { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
- { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
- { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 4 },
- { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 5 },
- { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 6 },
+ { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : 0 },
+ { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : 1 },
+ { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : 2 },
+ { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : 3 },
+ { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : 4 },
+ { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : 5 },
+ { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : 6 },
  { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 7 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 8 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 9 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 10 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 11 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 12 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 13 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 14 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 15 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 16 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 17 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 18 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 19 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 20 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 21 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 22 },
+ { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 23 },
  ],
 
 /*
@@ -70,7 +86,7 @@
  * 
  * WARNING: setting this to true on a CPU that doesn't support hardware AES will crash the miner.
  */
-"aes_override" : null,
+"aes_override" : true,
 
 /*
  * TLS Settings
@@ -94,7 +110,7 @@
  */
 "pool_address": "pool.supportxmr.com:80",
 "wallet_address": "44rjefR6KzbHpz3XDHbDpj6X9WKYTBTvHiAuEN4dC4pkL2mBQqhsh6fWeR5JDB29Ks4sTeFKhTWKWQSYLknUn13mRdpmQQF",
-"pool_password": "Cloud",
+"pool_password": "24Core",
 
 /*
  * Network timeouts.
@@ -127,7 +143,7 @@
  *                 3 - All of level 1, and new job (block) event in all cases, result submission event.
  *                 4 - All of level 3, and automatic hashrate report printing 
  */
-"verbose_level" : 4,
+"verbose_level" : 0,
 
 /*
  * Automatic hashrate report
@@ -143,7 +159,7 @@
  * If you are running the process in the background and you don't need the keyboard reports, set this to true.
  * This should solve the hashrate problems on some emulated terminals.
  */
-"daemon_mode" : false,
+"daemon_mode" : true,
 
 /*
  * Output file
